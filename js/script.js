@@ -38,10 +38,5 @@ let apikey="68efa0885519a6f01d76917c463ada68";
 }
 getWeatherData("Mumbai");
 
-function getData(e){
-  console.log(e)
-  console.log(e.target.value)
-  document.getElementById(td5)=e.target.value;
-}
-//concept delegation
+
 
