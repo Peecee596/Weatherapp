@@ -1,8 +1,15 @@
 var temp,sky,wind,skyIcon,loc,desc,country,feelsLike,humidity;
 
 let apikey="68efa0885519a6f01d76917c463ada68";
-  async function getWeatherData(){    
-      var cityName=document.getElementById('city').value;  
+  async function getWeatherData(cityName){   
+
+   //alert(cityName) 
+    if(cityName==null){
+      
+      cityName=document.getElementById('city').value;
+    }
+
+     // var cityName=document.getElementById('city').value;  
       await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apikey}`)
       .then(res=> res.json())
       .then(data=>{
@@ -29,5 +36,12 @@ let apikey="68efa0885519a6f01d76917c463ada68";
   })
       
 }
+getWeatherData("Mumbai");
 
+function getData(e){
+  console.log(e)
+  console.log(e.target.value)
+  document.getElementById(td5)=e.target.value;
+}
+//concept delegation
 

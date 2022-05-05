@@ -63,7 +63,8 @@ body{
 }
 .img-thumbnail{
     
-    border:none;
+    /* border:none !important; */
+    border: none;
 }
 .img{
     width:60%;
